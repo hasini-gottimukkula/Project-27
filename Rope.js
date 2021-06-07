@@ -1,4 +1,4 @@
-class Rope {
+class rope {
     constructor(body1, body2, offsetX, offsetY) {
         this.offsetX = offsetX
         this.offsetY = offsetY
@@ -7,7 +7,7 @@ class Rope {
             bodyB: body2,
             pointB: { x: this.offsetX, y: this.offsetY }
         }
-        this.rope = Constraint.create(options)
+        this.rope = Matter.Constraint.create(options)
         World.add(world, this.rope);
     }
 

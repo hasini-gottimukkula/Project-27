@@ -1,4 +1,4 @@
-class Roof {
+class roof {
     constructor(x, y, width, height) {
         var options = {
             isStatic: true
