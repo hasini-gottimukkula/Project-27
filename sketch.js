@@ -76,8 +76,8 @@ function keyPressed() {
 
 function drawLine() {
 	bobBody.position = Constraint.bodyA.position;
-	roofBodyPosition = constraint.bodyB.position;
-	roofBodyOffset = constraint.pointB;
+	roofBodyPosition = Constraint.bodyB.position;
+	roofBodyOffset = Constraint.pointB;
 	roofBodyX = roofBodyPosition.x + roofBodyOffset.x;
 	roofBodyY = roofBodyPosition.y + roofbodyOffset.y;
 
