@@ -28,12 +28,12 @@ function setup() {
 	//Create the Bodies Here.
 	bobObject1 = new bob(bobObjectX - bobDiameter * 2, bobObjectY, bobDiameter);
 	bobObject2 = new bob(bobObjectX - bobDiameter, bobObjectY, bobDiameter);
-	bobObject3 = new bob(bobObjectX, bobObjectY, bobDiameter);
-	bobObject4 = new bob(bobObjectX + bobDiameter, bobObjectY, bobDiameter);
-	bobObject5 = new bob(bobObjectX + bobDiameter * 2, bobObjectY, bobDiameter);
+	bobObject3 = new bob(bobObjectX - bobObjectY, bobDiameter);
+	bobObject4 = new bob(bobObjectX - bobDiameter, bobObjectY, bobDiameter);
+	bobObject5 = new bob(bobObjectX - bobDiameter * 2, bobObjectY, bobDiameter);
 
 
-	rope1 = new rope(bobObject1.body, roofObject.body, - bobDiameter * 2, 0);
+	rope1 = new rope(bobObject1.body, roofObject.body, bobDiameter * 2, 0);
 	rope2 = new rope(bobObject2.body, roofObject.body, bobDiameter * 1, 0);
 	rope3 = new rope(bobObject3.body, roofObject.body, bobDiameter * 0, 0);
 	rope4 = new rope(bobObject4.body, roofObject.body, bobDiameter * 1, 0);
@@ -76,8 +76,8 @@ function keyPressed() {
 
 function drawLine() {
 	bobBody.position = Constraint.bodyA.position;
-	roofBodyPosition = Constraint.bodyB.position;
-	roofBodyOffset = Constraint.pointB;
+	roofBodyPosition = constraint.bodyB.position;
+	roofBodyOffset = constraint.pointB;
 	roofBodyX = roofBodyPosition.x + roofBodyOffset.x;
 	roofBodyY = roofBodyPosition.y + roofbodyOffset.y;
 
